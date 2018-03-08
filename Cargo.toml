@@ -1,6 +1,6 @@
 [package]
 name = "xorshift128plus-rs"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["David Bengtsson <david@witchcult.se>"]
 description = "A simple implementation of the XorShift128+ pseudorandom number generator in Rust."
 keywords = ["random", "xorshift", "prng", "pseudo", "pseudorandom"]

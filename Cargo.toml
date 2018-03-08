@@ -6,5 +6,6 @@ description = "A simple implementation of the XorShift128+ pseudorandom number g
 keywords = ["random", "xorshift", "prng", "pseudo", "pseudorandom"]
 license = "MIT"
 maintenance = {status = "passively-maintained"}
+repository = "https://github.com/WitchcultGames/xorshift128plus-rs.git"
 
 [dependencies]

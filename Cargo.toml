@@ -1,5 +1,5 @@
 [package]
-name = "xorshift128plus"
+name = "xorshift128plus-rs"
 version = "0.1.0"
 authors = ["David Bengtsson <david@witchcult.se>"]
 

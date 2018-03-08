@@ -52,7 +52,7 @@ pub trait XorShift128PlusRandomizable {
 
 impl XorShift128PlusRandomizable for u8 {
     fn random_range(minimum: Self, maximum: Self, prng: &mut XorShift128Plus) -> Self {
-        let diff = (maximum - minimum) as f32;
+        let diff = maximum.wrapping_sub(minimum) as f32;
         let min = minimum as f32;
 
         (min + (prng.random_factor() * diff)) as Self
@@ -61,7 +61,7 @@ impl XorShift128PlusRandomizable for u8 {
 
 impl XorShift128PlusRandomizable for u16 {
     fn random_range(minimum: Self, maximum: Self, prng: &mut XorShift128Plus) -> Self {
-        let diff = (maximum - minimum) as f32;
+        let diff = maximum.wrapping_sub(minimum) as f32;
         let min = minimum as f32;
 
         (min + (prng.random_factor() * diff)) as Self
@@ -70,7 +70,7 @@ impl XorShift128PlusRandomizable for u16 {
 
 impl XorShift128PlusRandomizable for u32 {
     fn random_range(minimum: Self, maximum: Self, prng: &mut XorShift128Plus) -> Self {
-        let diff = (maximum - minimum) as f32;
+        let diff = maximum.wrapping_sub(minimum) as f32;
         let min = minimum as f32;
 
         (min + (prng.random_factor() * diff)) as Self
@@ -79,7 +79,7 @@ impl XorShift128PlusRandomizable for u32 {
 
 impl XorShift128PlusRandomizable for u64 {
     fn random_range(minimum: Self, maximum: Self, prng: &mut XorShift128Plus) -> Self {
-        let diff = (maximum - minimum) as f32;
+        let diff = maximum.wrapping_sub(minimum) as f32;
         let min = minimum as f32;
 
         (min + (prng.random_factor() * diff)) as Self
@@ -88,7 +88,7 @@ impl XorShift128PlusRandomizable for u64 {
 
 impl XorShift128PlusRandomizable for usize {
     fn random_range(minimum: Self, maximum: Self, prng: &mut XorShift128Plus) -> Self {
-        let diff = (maximum - minimum) as f32;
+        let diff = maximum.wrapping_sub(minimum) as f32;
         let min = minimum as f32;
 
         (min + (prng.random_factor() * diff)) as Self
@@ -97,7 +97,7 @@ impl XorShift128PlusRandomizable for usize {
 
 impl XorShift128PlusRandomizable for i8 {
     fn random_range(minimum: Self, maximum: Self, prng: &mut XorShift128Plus) -> Self {
-        let diff = (maximum - minimum) as f32;
+        let diff = maximum.wrapping_sub(minimum) as f32;
         let min = minimum as f32;
 
         (min + (prng.random_factor() * diff)) as Self
@@ -106,7 +106,7 @@ impl XorShift128PlusRandomizable for i8 {
 
 impl XorShift128PlusRandomizable for i16 {
     fn random_range(minimum: Self, maximum: Self, prng: &mut XorShift128Plus) -> Self {
-        let diff = (maximum - minimum) as f32;
+        let diff = maximum.wrapping_sub(minimum) as f32;
         let min = minimum as f32;
 
         (min + (prng.random_factor() * diff)) as Self
@@ -115,7 +115,7 @@ impl XorShift128PlusRandomizable for i16 {
 
 impl XorShift128PlusRandomizable for i32 {
     fn random_range(minimum: Self, maximum: Self, prng: &mut XorShift128Plus) -> Self {
-        let diff = (maximum - minimum) as f32;
+        let diff = maximum.wrapping_sub(minimum) as f32;
         let min = minimum as f32;
 
         (min + (prng.random_factor() * diff)) as Self
@@ -124,7 +124,7 @@ impl XorShift128PlusRandomizable for i32 {
 
 impl XorShift128PlusRandomizable for i64 {
     fn random_range(minimum: Self, maximum: Self, prng: &mut XorShift128Plus) -> Self {
-        let diff = (maximum - minimum) as f32;
+        let diff = maximum.wrapping_sub(minimum) as f32;
         let min = minimum as f32;
 
         (min + (prng.random_factor() * diff)) as Self
@@ -133,7 +133,7 @@ impl XorShift128PlusRandomizable for i64 {
 
 impl XorShift128PlusRandomizable for isize {
     fn random_range(minimum: Self, maximum: Self, prng: &mut XorShift128Plus) -> Self {
-        let diff = (maximum - minimum) as f32;
+        let diff = maximum.wrapping_sub(minimum) as f32;
         let min = minimum as f32;
 
         (min + (prng.random_factor() * diff)) as Self

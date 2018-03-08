@@ -41,9 +41,7 @@ impl XorShift128Plus {
         self.next() as f32 / std::u64::MAX as f32
     }
 
-    pub fn range<T>(&mut self, minimum: T, maximum: T) -> T
-        where T: XorShift128PlusRandomizable,
-    {
+    pub fn range<T: XorShift128PlusRandomizable>(&mut self, minimum: T, maximum: T) -> T {
         T::random_range(minimum, maximum, self)
     }
 }

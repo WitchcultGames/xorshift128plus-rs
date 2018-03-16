@@ -1,7 +1,7 @@
 [package]
 name = "xorshift128plus-rs"
-version = "0.1.5"
-authors = ["David Bengtsson <david@witchcult.se>"]
+version = "0.1.6"
+authors = ["David \"Dregel\" Bengtsson <david@witchcult.se>"]
 description = "A simple implementation of the XorShift128+ pseudorandom number generator in Rust."
 keywords = ["random", "xorshift", "prng", "pseudo", "pseudorandom"]
 license = "MIT"
